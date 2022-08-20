@@ -1,0 +1,73 @@
+[
+    {
+        "id": "3250fb59af1d4048",
+        "type": "inject",
+        "z": "1e98727bd0d4a336",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "test",
+        "payload": "안녕하세요. Hi",
+        "payloadType": "str",
+        "x": 410,
+        "y": 260,
+        "wires": [
+            [
+                "ee98c75ea221ffb3"
+            ]
+        ]
+    },
+    {
+        "id": "3afd6e0abf9874e3",
+        "type": "debug",
+        "z": "1e98727bd0d4a336",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ee98c75ea221ffb3",
+        "type": "change",
+        "z": "1e98727bd0d4a336",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 260,
+        "wires": [
+            [
+                "3afd6e0abf9874e3"
+            ]
+        ]
+    }
+]
